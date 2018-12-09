@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Portfolio Webpage</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <body ng-app="eduardoApp" ng-controller="MyCtrl as vm">
+         <!--
+==============================
+==============================
+            MENU
+==============================
+==============================
+-->
+  <div class="sideMenu" id="sideMenu">
+    <nav>
+      <div class="container">
+        <i class="{{vm.menu.iconClose}} iconsTopMenu pull-right" 
+           id="closeMenu" ng-click="vm.myMenu();">
+        </i>
+        <center id="imgPerfil">
+          <img src="{{vm.menu.img}}" class="animated imgMenu img-responsive " alt="Me" width="60%"/>
+        </center>
+        <h3 class="myNameMenu">{{vm.developerName}}</h3>
+        <p class="text-center especified" ng-hide="!vm.navUlMenu">{{vm.devEspecified}}</p>
+        <hr class="hrMenu"/>
+      </div>
+      
+      <ul class="menuModules" ng-hide="!vm.navUlMenu">
+        <li><a href="#aboutMe">{{vm.menu.m1}}</a></li>
+        <li><a href="#myWorks">{{vm.menu.m2}}</a></li>
+        <li><a href="#myTools">{{vm.menu.m3}}</a></li>
+        <li><a href="#contactMe">{{vm.menu.m4}}</a></li>
+      </ul>
+      <ul ng-show="!vm.navUlMenu" id="menuModules">
+        <li><a href="#aboutMe"><i class="{{vm.menuIcons.icon1}}"></i></a>
+        </li>
+        <li><a href="#myWorks"><i class="{{vm.menuIcons.icon2}}"></i></a>
+        </li>
+        <li><a href="#myTools"><i class="{{vm.menuIcons.icon3}}"></i></a>
+        </li>
+        <li><a href="#contactMe"><i class="{{vm.menuIcons.icon4}}"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container {{vm.navUlMenu? 'myContainerOpen': 'myContainerClose'}}"><!--GENERAL CONTENT-->
+       <!--
+==============================
+==============================
+          ABOUT ME
+==============================
+==============================
+-->
+    
+    <!--
+    =========================================================================
+    TEXT ABOUT ME
+    =========================================================================
+    -->
+      <section id="aboutMe">
+        <div class="container row containerContent {{vm.navUlMenu?'smallMenuC':'bigMenuC'}}">
+          <div class="col-md-6">
+            <div class="aboutTitle">
+              <h1 class="animated bounce"> About Me</h1>
+            </div>
+            <p class="someText">Hello World!! I'm Fatima Mujahid, I love programing, and creating new things. You can call me tech lover. I love to write technical stuff.</p>
+          </div>
+ 
+          <!--
+          =========================================================================
+          TABS ABOUT ME
+          =========================================================================
+          -->
+          <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                      <button class="btn btn-danger btn-lg btn-block greenButton" ng-click="vm.changeAboutRedSwitch();">What I Love ?</button>
+                    </div>
+                    <div class="col-md-6 pull-left">
+                      <button class="btn btn-success btn-lg btn-block redButton" style="{{vm.navUlMenu?'':'width:112.5%'}}" ng-click="vm.changeAboutGreenSwitch();">Know me More</button>
+                    </div>
+                    <div class="col-md-12 aboutGreenDiv" ng-hide="!vm.aboutRedSwitch">
+                        <img src="http://www.facciamoculturismo.it/it/wp-content/uploads/2015/10/entrepreneur-696976_640.png" class="aboutImg" />
+                        <div class="aboutTextImg">
+                            <h1>Fatima Mujahid<i class="fa fa-heart-o animated infinite pulse"></i>code</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12 aboutRedDiv" ng-show="vm.aboutGreenSwitch">
+                        <img src="https://media.giphy.com/media/F3Fy15KekUFj2/giphy.gif" class="aboutImgNight" />
+                        <div class="aboutTextImgNight">
+                          <h1>I Belive In...</h1>
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </div> 
+    </section><!--ABOUT ME--> 
+       <!--
+==============================
+==============================
+          MY WORKS
+==============================
+==============================
+-->
+    <section id="myWorks">
+      <div class="container row containerContent {{vm.navUlMenu?'smallMenuC':'bigMenuC'}}">
+          <div class="col-md-12 myWorksTitle">
+            <h1 class="pull-right">My Works</h1>
+          </div>
+          <div class="col-md-4">
+            <a href="https://github.com/fatimamujahid07/taarangana_website" target="_blank" class="animated myWorksAnimation">
+            <img src="assets/web.jpg" width="100%" class="firstImgMyWorks"/>
+            </a>
+            <h2 class="text-center">WebSite</h2>
+          </div>
+        <div class="col-md-4">
+          <a href="https://github.com/fatimamujahid07/DelhiTourismApp" target="_blank" class="animated myWorksAnimation">
+            <img src="assets/a1.png" width="100%" class="firstImgMyWorks"/>
+          </a>
+            <h2 class="text-center">AndroidApp</h2>
+          </div>
+        <div class="col-md-4">
+            <a href="http://www.waytotechworld.com/" target="_blank" class="animated myWorksAnimation">
+            <img src="assets/fresh aquasummit2.png" width="100%" class="firstImgMyWorks"/>
+            </a>
+            <h2 class="text-center">My Site</h2>
+          </div>
+      </div> 
+    </section><!--MY WORKS--> 
+       <!--
+==============================
+==============================
+          MY TOOLS
+==============================
+==============================
+-->    
+    <section id="myTools">
+      <div class="container row containerContent {{vm.navUlMenu?'smallMenuC':'bigMenuC'}}">
+        <div class="col-md-12">
+          <div class="myToolsTitle">  
+            <h1>My Tools</h1>
+          </div>   
+        </div>
+        <div class="col-md-2">
+          <img src="assets/html.png"  width="100%" class="animated imgAnimated"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/css.png" width="100%" class="img-circle"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/php.png" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/wrdpres.png" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/boot.jpg" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/java.png" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/js.png" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/ang.png" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/android.png" width="100%"/>
+        </div>
+        <div class="col-md-2">
+          <img src="assets/xampp.jpg" width="100%"/>
+        </div>
+      </div>
+    </section>
+           <!--
+==============================
+==============================
+          CONTACT ME
+==============================
+==============================
+-->  
+    <section id="contactMe">  
+       <div class="container row containerContent finally {{vm.navUlMenu?'smallMenuC':'bigMenuC'}}">
+         <div class="col-md-12 myWorksTitle">
+            <h1 class="pull-right">Contact Me</h1>
+          </div>
+           <div class="col-md-6">
+             <form>
+                <div class="form-group">
+                  <label>Name:</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Email:</label>
+                  <input type="email" class="form-control" required>
+                </div>
+               <div class="form-group">
+                  <label>Subject:</label>
+                  <input type="text" class="form-control" required>
+                </div>
+            </form>
+           </div>
+           <div class="col-md-6">
+               <div class="form-group">
+                  <label>Comment:</label>
+                  <textarea class="form-control contact" rows="7" required></textarea>  
+              </div>
+             <button type="submit" class="btn btn-block btn-success">Send Message</button>
+          </div>
+         <div class="col-md-5 followSpaceTop">
+          <div class="myToolsTitle">  
+            <h1>Follow Me On:</h1>
+          </div>   
+        </div>
+         <div class="col-md-1 followSpaceTop">
+           <a href="https://github.com/fatimamujahid07" target="_blank"><i class="fa fa-github-square followIcons"></i></a>
+         </div>
+         <div class="col-md-1 followSpaceTop">
+           <a href="https://www.facebook.com/SwiftTAyl" target="_blank"><i class="fa fa-facebook-square followIcons"></i></a>
+         </div>
+      </div>
+    </section>
+  </div><!--GENERAL CONTENT-->
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

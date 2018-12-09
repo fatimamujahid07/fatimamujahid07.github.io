@@ -1,0 +1,371 @@
+/*
+========================
+========================
+          MENU
+========================
+========================
+*/
+
+.sideMenu {
+  /*big menu*/
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #272125;
+  width: 270px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 5px 10px 5px #888888;
+  transition: 4s;
+}
+
+.sideMenuMinimized {
+  /*small menu*/
+  position: fixed;
+  background-color: #272125;
+  width: 90px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 5px 10px 5px #888888;
+  transition 4s;
+}
+
+.iconsTopMenu {
+  /*button resize menu*/
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  padding-right: 7px;
+  margin-right: -10px;
+}
+
+.imgMenu {
+  /*perfil image*/
+  margin-top: 5px;
+  border-radius: 50%;
+  border: 4px solid #c0392b;
+  animation-name: swing;
+}
+
+.imgMenu:hover {
+  /*perfil image on mouse over*/
+  animation-name: jello;
+}
+
+#imgPerfil {
+  /*best position top image*/
+  padding-top: 30px;
+}
+
+.myNameMenu {
+  /*Fatima Mujahid*/
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+}
+
+.especified {
+  /*web developer*/
+  padding-top: 5px;
+  color: #bdc3c7;
+}
+
+.hrMenu {
+  /*divisor between web developer and menu controls*/
+  margin-top: 10px;
+  background-color: #95a5a6;
+  width: 70%;
+}
+
+.menuModules {
+  /*=BIG MENU=About Me - My Works - My Tools - Contact Me*/
+  display: block;
+  line-height: 45px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.menuModulesMinimized {
+  /*=SMALL MENU=About Me - My Works - My Tools - Contact Me*/
+  display: block;
+  line-height: 65px;
+  font-size: 30px;
+}
+
+ul li a {
+  /*=TEXT=About Me - My Works - My Tools - Contact Me*/
+  color: #c0392b;
+  text-align: center;
+  display: block;
+}
+
+ul li a:hover {
+  /*=TEXT ON MOUSE OVER=About Me - My Works - My Tools - Contact Me*/
+  text-decoration: none;
+  color: #bdc3c7;
+}
+
+ul li a:focus {
+  /*=TEXT ON CLICK= About Me - My Works - My Tools - Contact Me*/
+  text-decoration: none;
+  color: #bdc3c7;
+}
+
+li {
+  /*BOTH SIDES TRANSPARENTS LINES = About Me - My Works - My Tools - Contact Me*/
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  margin-left: -40px;
+}
+
+li:hover {
+  /*BOTH SIDES RED LINES ON MOUSE OVER = About Me - My Works - My Tools - Contact Me*/
+  border-left: 3px solid #c0392b;
+  border-right: 3px solid #c0392b;
+}
+
+
+/*
+========================
+========================
+        GENERAL
+========================
+========================
+*/
+
+.transition {
+  transition: 0.2s;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.containerContent {
+  margin-top: 140px;
+}
+
+.smallMenuC {
+  max-width: 1033px;
+  margin-left: -70px;
+}
+
+.bigMenuC {
+  max-width: 1095px;
+  margin-left: -80px;
+}
+
+
+/*
+========================
+========================
+         BODY
+========================
+========================
+*/
+
+.myContainerOpen {
+  margin-left: 300px;
+  margin-top: 30px;
+  transition: 0.2s;
+}
+
+.myContainerClose {
+  margin-left: 200px;
+  margin-top: 30px;
+  transition: 0.2s;
+}
+
+.moduleTopSpace {
+  marging-top: 100px;
+}
+
+
+/*
+========================
+========================
+        ABOUT ME
+========================
+========================
+*/
+
+.aboutTitle {
+  opacity: 0.9;
+  border-left: 4px solid #c0392b;
+  padding-left: 15px;
+}
+
+.someText {
+  text-align: justify;
+  padding-top: 20px;
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+.aboutImg {
+  top: 70px;
+  width: 70%;
+  left: 31%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.aboutImgNight {
+  top: 65.5px;
+  width: 75%;
+  left: 27.5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+}
+
+.aboutTextImg {
+  width: 28%;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.aboutTextImgNight {
+  width: 55%;
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.aboutRedDiv {
+  background-color: #c0392b;
+  height: 282px;
+}
+
+.aboutGreenDiv {
+  background-color: #272125;
+  height: 282px;
+}
+
+.redButton {
+  margin-left: -15px!important;
+  border: 1px solid #c0392b;
+  background-color: #c0392b;
+  border-radius: 0px;
+  width: 113.5%;
+  cursor: pointer;
+}
+
+.redButton:hover {
+  background-color: #c0392b;
+  border: 1px solid #c0392b;
+}
+
+.redButton:focus {
+  outLine: 0;
+  box-shadow: none;
+}
+
+.greenButton {
+  margin-left: -15px!important;
+  border: 1px solid #272125;
+  background-color: #272125;
+  border-radius: 0px;
+  width: 113.5%;
+  cursor: pointer;
+}
+
+.greenButton:hover {
+  border: 1px solid #272125;
+  background-color: #272125;
+}
+
+.greenButton:focus {
+  outLine: 0;
+  box-shadow: none;
+}
+
+
+/*
+========================
+========================
+        MY WORKS
+========================
+========================
+*/
+
+.myWorksTitle {
+  text-align: center;
+  color: #c0392b;
+  border-right: 4px solid #272125;
+  padding-right: 15px;
+  margin-bottom: 60px;
+}
+
+.firstImgMyWorks{
+  width: 100%;
+  border: 4px solid white;
+  box-shadow: 0 7px 65px 0 rgba(0,0,0,0.12);
+  margin-bottom: 15px;
+}
+
+.myWorksAnimation:hover{
+  animation-name: swing;
+}
+
+/*
+========================
+========================
+        MY TOOLS
+========================
+========================
+*/
+
+.myToolsTitle {
+  opacity: 0.9;
+  border-left: 4px solid #c0392b;
+  padding-left: 15px;
+  margin-bottom: 60px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  border: 6px solid #272125;
+}
+
+.imgAnimated:visited {
+  transition: 5s;
+  animation-name: flipInX;
+}
+
+/*
+========================
+========================
+        CONTACT ME
+========================
+========================
+*/
+
+
+.followSpaceTop{
+  margin-top: 200px;
+}
+
+.followIcons{
+  font-size:50px;
+  color: black;
+  opacity:0.8;
+}
